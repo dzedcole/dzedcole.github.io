@@ -3,257 +3,311 @@
     padding: 0px;
 }
 html {
-    background-color: rgb(214, 255, 252);
+   font-family: 'Noto Sans KR', sans-serif;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
-#navbar {
+.navbar {
     display: flex;
-    background-color: #73faff;
+    justify-content: center;
+    background: rgba(148, 0, 211, 1);
+    border: solid 1px black;
+    box-shadow: 0px 2px 2px black;
 }
-#navbar a {
+.navbar a{
+    width: 200px;
+    border: solid 1px black;
+    text-align: center;
+    font-size: 34px;
     text-decoration: none;
-    width: 100%;
-    height: 60px;
-    font-size: 48px;
-    border: #000000 solid 1px;
-    text-align: center;
+    color: black;
+    text-shadow: 0px 0px 2px white;
 }
-#navbar a:hover {
-    background-color: #00dffc;
+.navbar a:first-of-type {background-image: linear-gradient(to right, violet, pink);}
+.navbar a:nth-child(even) {background-color: pink;}
+.navbar a:nth-child(odd) {background-color: pink;}
+.navbar a:last-of-type {background-image: linear-gradient(to right, pink, violet);}
+.navbar a:hover {
+    box-shadow: 0px 0px 5px orangered;
+    text-shadow: 0px 0px 1px purple;
+    border: solid 1px orangered;
 }
-
-/* Home pagina */
-
-#ptlogo {
-    margin-top: 100px;
-    width: 500px;
-    height: 400px;
-    border: black 3px solid;
-}
-h1 {
-    text-align: center;
-}
-#motivatie {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    background-color: #73faff;
-
+.return {
     position: absolute;
-    top: 160px;
-    left: 550px;
-    height: 125px;
-    width: 900px;
-    font-size: 20px;
-}
-#ervaring {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    background-color: #73faff;
-
-    position: absolute;
-    top: 330px;
-    left: 550px;
-    height: 165px;
-    width: 900px;
-    font-size: 20px;
-}
-
-#contact {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    background-color: #73faff;
-
-    position: absolute;
-    top: 530px;
-    left: 550px;
-    height: 75px;
-    width: 900px;
-    font-size: 20px;
-}
-#theme-switcher {
-    width: 150px;
-    height: 50px;
-    background-color: #73faff;
+    text-decoration: none;
+    font-size: 34px;
+    background: pink;
+    color: black;
+    text-shadow: 0px 0px 2px white;
     border: 1px solid black;
-
-    margin-top: 540px;
-    margin-left: -330px;
+    right: 0px;
+}
+.return:hover {
+    box-shadow: 0px 0px 2px orangered;
+    text-shadow: 0px 0px 1px purple;
+    border: solid 1px orangered;
+}
+.theme-switcher {
     position: absolute;
-    outline: none;
+    text-decoration: none;
+    font-size: 34px;
+    background: pink;
+    color: black;
+    text-shadow: 0px 0px 2px white;
+    border: 1px solid black;
+    left: 0px;
 }
-#theme-switcher:hover {
-    animation: change-background forwards 0.4s;
-    animation-iteration-count: 1;
+.theme-switcher:hover {
+    box-shadow: 0px 0px 2px orangered;
+    text-shadow: 0px 0px 1px purple;
+    border: solid 1px orangered;
 }
-@keyframes change-background{
-    0% {background-color: #73faff; border: 1px solid black;}
-    100% {background-color: #54bec2; border: 3px solid black;}
+.welcome {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    margin-top: 200px;
+    color: black;
+    text-shadow: 2px 2px purple;
+    border: solid 1px black;
+    background: rgba(1, 39, 255, 0.226);  
+    animation: bg-pulse 4s infinite forwards;  
+    height: 55px; 
 }
-.darkTheme {
-    background-color: rgb(61, 75, 73);
+.selected-theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -150px;
+    width: 40%;
+    height: 100px;
+    border: solid 1px black;
+    font-size: 24px;
+    margin-left: 30%;
+    background: linear-gradient(rgba(0, 0, 255, 0.1),
+                                rgba(0, 0, 255, 0.2),
+                                rgba(0, 0, 255, 0.1));
+}
+@keyframes theme-bar {
+    0% {top: -150px;}
+    100% {top: 75px;}
+}
+.home-underbar {
+    display: flex;
+    height: 55px;
+    margin-top: 70px;
+    color: rgba(1, 39, 255, 0.226);
+    border: solid 1px black;
+    background: rgba(1, 39, 255, 0.226);  
+    animation: bg-pulse2 4s infinite forwards;   
+}
+@keyframes bg-pulse {
+    0% {box-shadow: 0px -8px 10px rgba(1, 39, 255, 0.226);}
+    50% {box-shadow: 0px -20px 10px rgba(1, 39, 255, 0.226);}
+    100% {box-shadow: 0px -8px 10px rgba(1, 39, 255, 0.226);}
+}
+@keyframes bg-pulse2 {
+    0% {box-shadow: 0px 8px 10px rgba(1, 39, 255, 0.226);}
+    50% {box-shadow: 0px 20px 10px rgba(1, 39, 255, 0.226);}
+    100% {box-shadow: 0px 8px 10px rgba(1, 39, 255, 0.226);}
+}
+.dark-theme {
+    background: #00bba2;
     color: white;
 
+    background-image:  linear-gradient(to right, #f261ff75, #7eb8ff75, #fbcdff75, #d7e9ff75);
+    animation-direction: reverse;
 }
-.darkTheme-p {
-    background-color: rgb(105, 143, 137);
-    border: 1px solid rgb(166, 255, 242);
+.home-bg {
+    margin-left: 0px;
+    margin-right: 0px;
+    background-image: linear-gradient(to right, #7eb8ff, #fcd9ff, #7eb8ff);
+    height: 585px;
 }
-
-/* Eigenschappen */
-
-#eigenschappen {
-background-color: #73faff;
-width: 400px;
-height: 780px;
-font-size: 30px;
-border: solid black 1px;
-margin-top: 100px;
-margin-left: 325px;
-}
-#eigenschappen ul {
-    margin-top: -250px;
-}
-#eigenschappen li:nth-child(1) {
-    margin-top: 250px;
-}
-#eigenschappen li:nth-child(2) {
-    margin-top: 135px;
-}
-#eigenschappen li:nth-child(3) {
-    margin-top: 270px;
-}
-#eigenschappen h3 {
-    background-color: #00f7ff; 
-    border-bottom: dashed black 1px;
-    margin-top: 0px;
-}
-#behulpzaamImg {
-    border: solid black 1px;
-    width: 375px;
-    height: 125px;
-    position: absolute;
-    left: 345px;
-    top: 250px;
-}
-#vriendelijkImg {
-    border: solid black 1px;
-    width: 375px;
-    height: 250px;
-    position: absolute;
-    left: 345px;
-    top: 430px;
-}
-#rustigImg {
-    border: solid black 1px;
-    width: 375px;
-    height: 200px;
-    position: absolute;
-    left: 345px;
-    top: 730px;
-}
-#myselfImg {
-    position: absolute;
-    width: 600px;
-    height: 900px;
-    border: solid #000000 3px;
-    margin-top: 55px;
-    margin-left: 850px;
-}
-
-/* Ervaring pagina*/
-
-#ervaringTabel {
-    border: solid black 2px;
-    height: 200px;
-    width: 600px;
-    border-collapse: collapse;
-    margin-top: 50px;
-    margin-left: 100px;
-}
-#ervaringTabel td{
-    border: dashed black 1px;
-    border-collapse: collapse;
-    background-color: #a9f4f7;
-}
-#ervaringTabel th {
-    border-right: solid black 2px; 
-    background-color: #83dde0;
-}
-#ervaringHTML {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    background-color: #73faff;
-    font-size: 20px;
-
-    height: 125px;
-    width: 900px;
-    position: absolute;
-    left: 800px;
-    top: 125px;
-}
-#ervaringJS {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    background-color: #73faff;
-    font-size: 20px;
-
-    height: 150px;
-    width: 900px;
-    position: absolute;
-    left: 800px;
-    top: 275px;
-}
-#ervaringCsharp {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    background-color: #73faff;
-    font-size: 20px;
-
-    height: 150px;
-    width: 900px;
-    position: absolute;
-    left: 800px;
-    top: 450px;
-}
-#htmlcsslogo {
-    border: solid black 1px;
-    width: 700px;
-    height: 350px;
-    margin-top: 25px;
-    margin-left: 50px;
-}
-
-/* Projecten */
-
-#project {
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
-    background-color: #73faff;
-
-    position: absolute;
-    top: 160px;
-    left: 550px;
-    height: 120px;
-    width: 700px;
-    font-size: 20px;
-
-}
-#projecten {
+.home-nav {
     display: flex;
-    margin-top: 330px;
-    margin-left: 475px;
+    justify-content: center;
+    margin-top: 50px;
 }
-#projecten div {
-    height: 200px;
-    width: 250px;
-    border: solid #000000 1px;
-    margin-left: 20px;
-    background-color: #73faff;
-    text-align: center;
+.home-nav a{
+width: 300px;
+height: 350px;
+border: solid 1px #000000;
+border-radius: 12px;
+margin-left: 25px;
+text-align: center;
+text-decoration: none;
+font-size: 50px;
+color: black;
+background: linear-gradient(#00bba2, rgba(255, 255, 255, 0.3), #00bba2);
+
+text-shadow: 1px 1px black;
+box-shadow: 1px 1px 3px black;
+}
+.home-nav img {
+    width: 280px;
+    height: 260px;
+    margin-top: 20px;
+    border: solid 1px black;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px black;
+}
+.home-nav a:hover {
+animation: box-shadow-pulse 0.5s;
+animation-iteration-count: 1;
+animation-delay: none;
+animation-fill-mode: both;
+color: black;
+box-shadow: 0px 0px 5px #fd8700;
+text-shadow: 1px 1px white;
+background: linear-gradient(#c1fff7, rgba(255, 226, 172, 0.5), #c1fff7);
+
+border: solid 1px orangered;
+}
+
+@keyframes box-shadow-pulse {
+0% {
+    box-shadow: 0px 0px 3px #fd8700;
+    border: solid 1px orangered;
+}
+
+100% {
+    transform: rotateX(5deg);
+    box-shadow: 0px 0px 6px #fd8700;
+    border: solid 1px orangered;
+}
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    background: white;
+    width: 80%;
+    border: solid 1px black;
+    box-shadow: 0px 0px 4px black;
+}
+
+.dark-mode div {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: solid 1px white;
+    box-shadow: 0px 0px 4px white;
+}
+.dark-mode {
+    background: rgb(53, 53, 53);
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+    border-left: solid 1px white;
+}
+.dark-mode h3{
+    color: white;
+}
+.dark-mode button, .dark-mode a {
+    color: white;
+}
+.nav-dark-mode {
+    background: rgb(36, 36, 36);
+    border-bottom: solid 1px white;
+}
+.nav-dark-mode button {
+    background: gray;
+    border: solid 1px white;
+    color: white;
+}
+.nav-dark-mode a{
+    color: white;
+    border: solid 1px white;
+}
+
+.nav-dark-mode a:first-of-type {background-image: linear-gradient(to right, rgb(54, 54, 54), gray);}
+.nav-dark-mode a:nth-child(even) {background-color: gray;}
+.nav-dark-mode a:nth-child(odd) {background-color: gray;}
+.nav-dark-mode a:last-of-type {background-image: linear-gradient(to right, gray, rgb(54, 54, 54));}
+.nav-dark-mode a:hover {
+    box-shadow: 0px 0px 5px orangered;
+    text-shadow: 0px 0px 1px purple;
+    border: solid 1px orangered;
+}
+
+/* CALCULATOR */
+
+.calc-main {
+    display: flex;
+    margin-top: 250px;
+    
+}
+.calc-main p {
+    width: 930px;
+
+    background-color: beige;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 48px;
+    text-align: right;
+}
+.calc-main button {
+    outline: none;
+    font-size: 48px;
+    border-radius: 15px;
+    border: solid 2px #000000;
+    margin: 5px;
+}
+#calc {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    height: 400px;
+}
+
+.calc-main section:nth-child(2){
+    flex: 6;
+
+    background-color: gray;
+    border: solid 1px #000000;
+    border-radius:4px;
+}
+.calc-main section:nth-child(1){flex: 3;}
+.calc-main section:nth-child(3){flex: 3;}
+
+
+.number {
+    background: linear-gradient(to right, blue, lightblue, blue)}
+
+.operators {
+    color: red;
+    border-radius: 5px;
+    background: linear-gradient(to right, turquoise, lightblue, turquoise);
+}
+.calculate-button {
+    color: black;
+    border-radius: 5px;
+    background: linear-gradient(to right, orangered, orange, orangered);
+}
+.answer {
+    color: #000000;
+    border: solid 1px #000000;
+    width: 930px;
+
+    background-color: #ffffff;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 48px;
+    text-align: right;
+}
+.number:hover {
+    background: linear-gradient(to right, blue, white, blue);
+    border: solid 2px red;
+  }
+.operators:hover {
+    background: linear-gradient(to right, turquoise, white, turquoise);
+    border: solid 2px red;
+}
+.calculate-button:hover {
+    background: linear-gradient(to right, orangered, white, orangered);
+    border: solid 2px red;
 }

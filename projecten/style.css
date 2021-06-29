@@ -1,0 +1,41 @@
+.main div {
+    width: 200px;
+    height: 200px;
+    border: solid 1px black;
+    border-radius: 10%;
+    background: rgba(137, 43, 226, 0.1);
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0px 0px 4px black;
+}
+.main h3 {
+    text-align: center;
+}
+.main button {
+    width: 150px;
+    height: 30px;
+    font-size: 16px;
+    margin-left: 25px;
+    background: rgba(137, 43, 226, 0.3);
+    border: solid 1px purple;
+    border-radius: 30%;
+    text-decoration: none;
+    color: black;
+}
+.main a {
+    text-decoration: none;
+    color: black;
+}
+.no-project button {
+    height: unset;
+    border: dashed 2px purple;
+    border-radius: 0%;
+}
+.wip button {
+    height: unset;
+    border: dashed 2px purple;
+    border-radius: 0%;
+}
