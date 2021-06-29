@@ -29,33 +29,15 @@ function themeSwitch() {
     
 
     if (localStorage.getItem("current-theme") == "main") {
-    main.className = "main dark-mode";
-    navbar.className = "navbar nav-dark-mode";
 
-    document.querySelector("html").style.background = "url(../img/bg-night.png)";
-    document.querySelector("html").style.backgroundRepeat = "no-repeat";
-    document.querySelector("html").style.backgroundSize = "cover";
-    document.querySelector("html").style.height = "100%";
-
-    currentTheme = "dark-mode";
-    localStorage.clear()
-    localStorage.setItem("current-theme", currentTheme);
-
-    select()
+        changeToDarkMode()
+        console.log(localStorage)
+        select()
     }
     else {
-        main.className = "main";
-        navbar.className = "navbar";
 
-        document.querySelector("html").style.background = "url(../img/bg-day.png)";
-        document.querySelector("html").style.backgroundRepeat = "no-repeat";
-        document.querySelector("html").style.backgroundSize = "cover";
-        document.querySelector("html").style.height = "100%";
-
-        currentTheme = "main";
-        localStorage.clear()
-        localStorage.setItem("current-theme", currentTheme);
-        
+        changeToLightMode()
+        console.log(localStorage)
         select()
     }
 
@@ -66,6 +48,29 @@ function themeSwitch() {
 
     if (n > 7) {
         if (n < 19 ) {
+            changeToLightMode()
+    }
+}
+    else {            
+            changeToDarkMode()
+            
+    }
+    function changeToDarkMode() {
+            document.querySelector(".main").className = "main dark-mode";
+            document.querySelector(".navbar").className = "navbar nav-dark-mode";
+        
+            document.querySelector("html").style.background = "url(../img/bg-night.png)";
+            document.querySelector("html").style.backgroundRepeat = "no-repeat";
+            document.querySelector("html").style.backgroundSize = "cover";
+            document.querySelector("html").style.height = "100%";
+            
+            currentTheme = "main dark-mode";
+            localStorage.setItem("current-theme", currentTheme);
+    }
+    function changeToLightMode() {
+            document.querySelector(".main").className = "main";
+            document.querySelector(".navbar").className = "navbar";
+
             document.querySelector("html").style.background = "url(../img/bg-day.png)";
             document.querySelector("html").style.backgroundRepeat = "no-repeat";
             document.querySelector("html").style.backgroundSize = "cover";
@@ -75,22 +80,5 @@ function themeSwitch() {
             localStorage.setItem("current-theme", currentTheme);
             console.log (currentTheme)
     }
-}
-    else {            
-            document.querySelector("html").style.background = "url(../img/bg-day.png)";
-            document.querySelector("html").style.backgroundRepeat = "no-repeat";
-            document.querySelector("html").style.backgroundSize = "cover";
-            document.querySelector("html").style.height = "100%";
 
-            currentTheme = "main";
-            localStorage.setItem("current-theme", currentTheme);
-
-            console.log(currentTheme)
-    }
-    function changeToDarkMode() {
-        document.querySelector(".main").className = "main dark-mode";
-            document.querySelector(".nav").className = "navbar nav-dark-mode";
-    }
-
-localStorage.clear()
-console.log("File Loaded!")
+console.log(localStorage)
